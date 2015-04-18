@@ -68,3 +68,4 @@
 5. python manage.py migrate
 
 * if Model Change, you must python manage.py makemigrations and python manage.py migrate.
+* Tastypie reousrces.py 下的 @transaction.commit_on_success 要改為 transaction.atomic, 因為 Django 1.8 沒有這個 Method.
