@@ -95,3 +95,4 @@ STATIC_URL = '/static/'
 
 
 # add cache feature here
+from .monkey_patch import *

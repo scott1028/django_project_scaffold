@@ -6,8 +6,8 @@ from django.db import models
 from django.utils import six, timezone
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import python_2_unicode_compatible
-from django.contrib.auth.models import BaseUserManager
-from django.contrib.auth.hashers import check_password
+# from django.contrib.auth.models import BaseUserManager
+# from django.contrib.auth.hashers import check_password
 
 
 @python_2_unicode_compatible
