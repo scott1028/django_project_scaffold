@@ -2,7 +2,7 @@
 # ref: https://docs.djangoproject.com/en/1.8/topics/auth/default/#how-to-log-a-user-in
 # ref: http://stackoverflow.com/questions/5376985/django-request-user-is-always-anonymous-user
 
-from django.contrib.auth import authenticate
+# from django.contrib.auth import authenticate
 from django.contrib.auth import login
 from django.http import HttpResponse
 from django.views.decorators.http import require_POST
