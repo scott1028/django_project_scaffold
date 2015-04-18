@@ -1,0 +1,11 @@
+Django==1.8
+django-redis==3.8.3
+django-tastypie==0.12.1
+flake8==2.4.0
+mccabe==0.3
+pep8==1.5.7
+pyflakes==0.8.1
+python-dateutil==2.4.2
+python-mimeparse==0.1.4
+redis==2.10.3
+six==1.9.0
