@@ -2,9 +2,11 @@
 # ref: http://www.django-rest-framework.org/#installation
 # ref: http://www.django-rest-framework.org/api-guide/filtering/#filtering-against-query-parameters
 # ref: http://www.django-rest-framework.org/api-guide/filtering/#setting-filter-backends
+# ref: http://www.django-rest-framework.org/api-guide/viewsets/#marking-extra-actions-for-routing
 
 
 from django.conf.urls import url, include
+from django.shortcuts import get_object_or_404
 from modules.daoService.models import User
 from rest_framework import routers, serializers, viewsets
 from rest_framework import filters
@@ -23,11 +25,17 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     filter_backends = (filters.DjangoFilterBackend,)
 
+    # /users/
     # def list(self, request):
-    #     print self.request.QUERY_PARAMS
-    #     username = self.request.QUERY_PARAMS.get('username', None)
+    #     username = self.kwargs.get('username', None) or self.request.QUERY_PARAMS.get('username', None)
     #     queryset = User.objects.all()
     #     serializer = UserSerializer(queryset, many=True, context={'request': request})
+    #     return Response(serializer.data)
+
+    # /users/:id/
+    # def retrieve(self, request, *args, **kwargs):
+    #     obj = User.objects.first()
+    #     serializer = UserSerializer(obj, many=False, context={'request': request})
     #     return Response(serializer.data)
 
 from rest_framework import generics
