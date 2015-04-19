@@ -44,7 +44,11 @@ INSTALLED_APPS = (
     # 'django.contrib.contenttypes',
     # 'django.contrib.sessions',
     # 'django.contrib.messages',
-    # 'django.contrib.staticfiles',
+
+    # django restful framework require
+    'django.contrib.staticfiles',
+
+    'rest_framework',
     'modules.daoService',
 )
 
@@ -95,6 +99,18 @@ STATIC_URL = '/static/'
 
 
 # add cache feature here
+
+# for django restful framework
+AUTHENTICATION_BACKENDS = ('modules.userService.authBackend.ModelBackend',)
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
+
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 CACHES = {

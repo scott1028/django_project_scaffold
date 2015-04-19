@@ -39,7 +39,19 @@ class User(models.Model):
     backend = 'django.contrib.auth.backends.ModelBackend'
 
     def is_anonymous(self):
-        return False
+        if self.pk != None:
+            return False
+        else:
+            return True
+
+    def is_authenticated(self):
+        if self.pk != None:
+            return True
+        else:
+            return False
+
+    def has_perms(self, x):
+        return True
 
     def __str__(self):
         return self.username
