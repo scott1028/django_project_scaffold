@@ -101,6 +101,8 @@ STATIC_URL = '/static/'
 # add cache feature here
 
 # for django restful framework
+
+# ref: http://www.django-rest-framework.org/#installation
 AUTHENTICATION_BACKENDS = ('modules.userService.authBackend.ModelBackend',)
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,

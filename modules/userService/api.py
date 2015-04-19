@@ -1,3 +1,7 @@
+# coding: utf-8
+# ref: http://www.django-rest-framework.org/#installation
+
+
 from django.conf.urls import url, include
 from modules.daoService.models import User
 from rest_framework import routers, serializers, viewsets
