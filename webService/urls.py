@@ -12,4 +12,5 @@ urlpatterns = patterns('',
 	# If you're intending to use the "browsable API",
 	# you'll probably also want to add REST framework's login and logout views. Add the following to your root urls.py file.
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api/test_multipart_patch/', 'webService.views.test_multipart_patch')
 )
